@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "dgSpecHash": "p6PUlJTPuiU=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Usuario\\Desktop\\Herramientas_ Trabajo_Estudio\\Repositorio c#\\Puros mios\\Proyecto 3 IPC2\\ IPC2_Proyecto3_202602\\Proyecto3.API\\Proyecto3.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.3\\microsoft.aspnetcore.openapi.10.0.3.nupkg.sha512",
+    "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512",
+    "C:\\Users\\Usuario\\.nuget\\packages\\system.text.json\\8.0.5\\system.text.json.8.0.5.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'Microsoft.OpenApi' 2.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-v5pm-xwqc-g5wc",
+      "projectPath": "C:\\Users\\Usuario\\Desktop\\Herramientas_ Trabajo_Estudio\\Repositorio c#\\Puros mios\\Proyecto 3 IPC2\\ IPC2_Proyecto3_202602\\Proyecto3.API\\Proyecto3.API.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Usuario\\Desktop\\Herramientas_ Trabajo_Estudio\\Repositorio c#\\Puros mios\\Proyecto 3 IPC2\\ IPC2_Proyecto3_202602\\Proyecto3.API\\Proyecto3.API.csproj",
+      "libraryId": "Microsoft.OpenApi",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
+}
