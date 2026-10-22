@@ -1,6 +1,44 @@
-@Proyecto3.API_HostAddress = http://localhost:5149
+@api = http://localhost:5149
 
-GET {{Proyecto3.API_HostAddress}}/weatherforecast/
-Accept: application/json
+### Estado del servicio
+GET {{api}}/
 
-###
+### Actualizar RTU (ejemplo válido según el algoritmo habitual de NIT de Guatemala)
+POST {{api}}/api/rtu/actualizar
+Content-Type: application/json
+
+[
+  { "NIT": "7378106", "nombre": "Empresa ABC, S.A." },
+  { "NIT": "8338817", "nombre": "Comercial XYZ, S.A." }
+]
+
+### Procesar facturas
+POST {{api}}/api/autorizaciones/procesar
+Content-Type: application/json
+
+[
+  {
+    "TIEMPO": "Guatemala, 15/01/2025 15:25 hrs.",
+    "REFERENCIA": "A1990",
+    "NIT_EMISOR": "7378106",
+    "NIT_RECEPTOR": "8338817",
+    "VALOR": 100.00,
+    "IVA": 12.00,
+    "TOTAL": 112.00
+  }
+]
+
+### Resumen de IVA
+GET {{api}}/api/consultas/resumen-iva?fecha=2025-01-15
+
+### Resumen por rango
+GET {{api}}/api/consultas/resumen-rango?desde=2025-01-01&hasta=2025-01-31&conIva=true
+
+### Estadísticas
+GET {{api}}/api/consultas/estadisticas?desde=2025-01-01&hasta=2025-01-31
+
+### Consultar facturas emitidas
+GET {{api}}/api/consultas/contribuyente?nit=7378106&tipo=emitidas&desde=2025-01-01&hasta=2025-01-31
+
+### Inicializar sistema (BORRA LOS DATOS GUARDADOS)
+POST {{api}}/api/sistema/inicializar

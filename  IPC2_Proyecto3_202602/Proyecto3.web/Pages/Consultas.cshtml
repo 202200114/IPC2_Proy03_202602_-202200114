@@ -1,0 +1,122 @@
+@page
+@model Proyecto3.Web.Pages.ConsultasModel
+@{
+    ViewData["Title"] = "Consultas";
+}
+<style>
+    .hero{padding:1.5rem;border-radius:18px;background:linear-gradient(120deg,#14213d,#245b78);color:#fff;margin-bottom:1.4rem}
+    .panel{background:#fff;border:1px solid #dbe3ea;border-radius:14px;padding:1.2rem;margin-bottom:1.1rem;box-shadow:0 4px 14px #1020300d}
+    .btn-primary{background:#176b87;border-color:#176b87}.json-result{white-space:pre-wrap;overflow-wrap:anywhere;background:#101923;color:#e8f4f8;padding:1rem;border-radius:10px;max-height:420px;overflow:auto}
+    @@media print{.no-print,form,nav,header,footer,.hero,.row{display:none!important}.panel{box-shadow:none;border:1px solid #aaa;break-inside:avoid}.json-result{color:#000;background:#fff;max-height:none;overflow:visible;white-space:pre-wrap}}
+</style>
+<div class="hero">
+    <h1>Consultas y reportes</h1>
+    <p class="mb-0">Los resultados se calculan en la API a partir de los archivos persistidos.</p>
+</div>
+<p class="no-print"><a asp-page="/Index">← Volver al envío de mensajes</a></p>
+<div class="row g-3">
+    <div class="col-lg-6">
+        <section class="panel h-100">
+            <h2 class="h5">Consultar contribuyente</h2>
+            <form method="post" asp-page-handler="Contribuyente">
+                <label class="form-label" for="nit">NIT</label><input class="form-control mb-2" id="nit" name="Nit" value="@Model.Nit" required />
+                <label class="form-label" for="tipo">Tipo de factura</label><select class="form-select mb-2" id="tipo" name="Tipo"><option value="emitidas">Emitidas</option><option value="recibidas">Recibidas</option></select>
+                <div class="row"><div class="col"><label class="form-label" for="desde1">Desde</label><input class="form-control mb-2" type="date" id="desde1" name="Desde" value="@Model.Desde" required /></div><div class="col"><label class="form-label" for="hasta1">Hasta</label><input class="form-control mb-2" type="date" id="hasta1" name="Hasta" value="@Model.Hasta" required /></div></div>
+                <button class="btn btn-primary" type="submit">Consultar</button>
+            </form>
+        </section>
+    </div>
+    <div class="col-lg-6">
+        <section class="panel h-100">
+            <h2 class="h5">Resumen de IVA por fecha y NIT</h2>
+            <form method="post" asp-page-handler="Iva">
+                <label class="form-label" for="fecha">Fecha</label><input class="form-control mb-3" type="date" id="fecha" name="Fecha" value="@Model.Fecha" required />
+                <button class="btn btn-primary" type="submit">Generar resumen</button>
+            </form>
+        </section>
+    </div>
+    <div class="col-lg-6">
+        <section class="panel h-100">
+            <h2 class="h5">Resumen por rango de fechas</h2>
+            <form method="post" asp-page-handler="Rango">
+                <label class="form-label" for="desde2">Desde</label><input class="form-control mb-2" type="date" id="desde2" name="Desde" value="@Model.Desde" required />
+                <label class="form-label" for="hasta2">Hasta</label><input class="form-control mb-2" type="date" id="hasta2" name="Hasta" value="@Model.Hasta" required />
+                <div class="form-check mb-3">@if (Model.ConIva) { <input class="form-check-input" type="checkbox" id="conIva" name="ConIva" value="true" checked /> } else { <input class="form-check-input" type="checkbox" id="conIva" name="ConIva" value="true" /> }<label class="form-check-label" for="conIva">Mostrar total con IVA</label></div>
+                <button class="btn btn-primary" type="submit">Consultar rango</button>
+            </form>
+        </section>
+    </div>
+    <div class="col-lg-6">
+        <section class="panel h-100">
+            <h2 class="h5">Estadísticas y errores</h2>
+            <form method="post" asp-page-handler="Estadisticas">
+                <label class="form-label" for="desde3">Desde</label><input class="form-control mb-2" type="date" id="desde3" name="Desde" value="@Model.Desde" required />
+                <label class="form-label" for="hasta3">Hasta</label><input class="form-control mb-3" type="date" id="hasta3" name="Hasta" value="@Model.Hasta" required />
+                <button class="btn btn-primary" type="submit">Ver estadísticas</button>
+            </form>
+        </section>
+    </div>
+</div>
+<div class="panel mt-3 no-print">
+    <h2 class="h5">Administración</h2>
+    <p class="text-danger">Inicializar elimina los contribuyentes y las facturas almacenadas.</p>
+    <form method="post" asp-page-handler="Inicializar" onsubmit="return confirm('¿Seguro que deseas borrar todos los datos?');">
+        <button class="btn btn-outline-danger" type="submit">Inicializar sistema</button>
+    </form>
+</div>
+@if (!string.IsNullOrWhiteSpace(Model.Error))
+{
+    <div class="alert alert-warning">@Model.Error</div>
+}
+@if (!string.IsNullOrWhiteSpace(Model.Resultado))
+{
+    <section class="panel" id="reporte">
+        <div class="d-flex justify-content-between align-items-center gap-2 flex-wrap">
+            <h2 class="h5">@Model.TituloResultado</h2>
+            <button class="btn btn-outline-secondary no-print" type="button" onclick="window.print()">Imprimir / Guardar como PDF</button>
+        </div>
+        <pre class="json-result" id="resultadoJson">@Model.Resultado</pre>
+        <canvas id="grafica" width="900" height="300" style="width:100%;max-width:900px;display:none"></canvas>
+    </section>
+}
+<script>
+(function () {
+  const pre = document.getElementById('resultadoJson');
+  const canvas = document.getElementById('grafica');
+  if (!pre || !canvas) return;
+  let root;
+  try { root = JSON.parse(pre.textContent); } catch { return; }
+  let puntos = [], series = [];
+  if (Array.isArray(root.detalle)) {
+    puntos = root.detalle.map(x => x.fecha);
+    series = [{ nombre: 'Valor autorizado', valores: root.detalle.map(x => Number(x.valorAutorizado || 0)) }];
+  } else if (Array.isArray(root.detallePorFecha)) {
+    puntos = root.detallePorFecha.map(x => x.fecha);
+    series = [{ nombre: 'Monto facturado', valores: root.detallePorFecha.map(x => Number(x.montoTotalFacturado || 0)) }];
+  } else if (Array.isArray(root.resumen)) {
+    puntos = root.resumen.map(x => x.nit);
+    series = [
+      { nombre: 'IVA emitido', valores: root.resumen.map(x => Number(x.ivaEmitido || 0)) },
+      { nombre: 'IVA recibido', valores: root.resumen.map(x => Number(x.ivaRecibido || 0)) }
+    ];
+  }
+  if (!puntos.length) return;
+  canvas.style.display = 'block';
+  const ctx = canvas.getContext('2d'), W = canvas.width, H = canvas.height;
+  ctx.clearRect(0, 0, W, H); ctx.fillStyle = '#fff'; ctx.fillRect(0,0,W,H);
+  const left = 70, right = 20, top = 30, bottom = 65, chartW = W-left-right, chartH=H-top-bottom;
+  const max = Math.max(1, ...series.flatMap(s => s.valores));
+  ctx.strokeStyle = '#cbd5e1'; ctx.fillStyle = '#243447'; ctx.font = '12px sans-serif';
+  for (let i=0;i<=4;i++) { const y=top+chartH*i/4; ctx.beginPath();ctx.moveTo(left,y);ctx.lineTo(W-right,y);ctx.stroke();ctx.fillText((max*(4-i)/4).toFixed(0),8,y+4); }
+  const cluster = chartW / puntos.length, ancho = Math.max(3, Math.min(30, cluster/(series.length+1)));
+  const tonos = ['#167d9a','#d97706'];
+  puntos.forEach((label,i)=>{
+    series.forEach((s,j)=>{
+      const valor=s.valores[i]||0, h=valor/max*chartH;
+      ctx.fillStyle=tonos[j%tonos.length];ctx.fillRect(left+i*cluster+cluster/2-(series.length*ancho)/2+j*ancho,top+chartH-h,ancho-2,h);
+    });
+    ctx.save();ctx.translate(left+i*cluster+cluster/2,H-bottom+10);ctx.rotate(-0.35);ctx.fillStyle='#243447';ctx.fillText(String(label).slice(0,18),0,0);ctx.restore();
+  });
+  series.forEach((s,j)=>{ctx.fillStyle=tonos[j%tonos.length];ctx.fillRect(left+j*160,8,12,12);ctx.fillStyle='#243447';ctx.fillText(s.nombre,left+18+j*160,18);});
+})();
+</script>

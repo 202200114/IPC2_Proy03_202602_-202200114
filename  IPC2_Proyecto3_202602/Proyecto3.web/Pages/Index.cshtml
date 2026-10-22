@@ -1,0 +1,93 @@
+@page
+@model Proyecto3.Web.Pages.IndexModel
+@{
+    ViewData["Title"] = "Inicio";
+}
+<style>
+    .hero{padding:2rem;border-radius:18px;background:linear-gradient(120deg,#14213d,#245b78);color:#fff;margin-bottom:1.5rem}
+    .panel{background:#fff;border:1px solid #dbe3ea;border-radius:14px;padding:1.3rem;margin-bottom:1.2rem;box-shadow:0 4px 14px #1020300d}
+    .btn-primary{background:#176b87;border-color:#176b87}.json-result{white-space:pre-wrap;overflow-wrap:anywhere;background:#101923;color:#e8f4f8;padding:1rem;border-radius:10px;max-height:480px;overflow:auto}
+</style>
+<div class="hero">
+    <h1>SAT · Servicio de autorización de DTE</h1>
+    <p class="mb-0">Simulador académico de recepción de contribuyentes y solicitudes de autorización de facturas.</p>
+</div>
+<div class="row g-3 mb-4">
+    <div class="col-md-4"><a class="text-decoration-none" asp-page="/Index"><div class="panel h-100"><h4>Enviar mensaje</h4><p class="text-secondary mb-0">Sube archivos JSON para actualizar el RTU o procesar facturas.</p></div></a></div>
+    <div class="col-md-4"><a class="text-decoration-none" asp-page="/Consultas"><div class="panel h-100"><h4>Consultas y reportes</h4><p class="text-secondary mb-0">Consulta facturas, resúmenes diarios, estadísticas y gráficas.</p></div></a></div>
+    <div class="col-md-4"><div class="panel h-100"><h4>Ayuda</h4><p class="text-secondary">Nombre y carné del estudiante.</p><a asp-page="/Ayuda">Ver información</a></div></div>
+</div>
+<div class="panel">
+    <h2 class="h4 mb-3">Enviar archivo JSON</h2>
+    <form method="post" asp-page-handler="Enviar" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label class="form-label" for="tipo">Tipo predeterminado para JSON vacíos o sin estructura reconocida</label>
+            <select asp-for="TipoMensaje" class="form-select" id="tipo">
+                <option value="facturas">Autorización de facturas</option>
+                <option value="rtu">Actualizar RTU (contribuyentes)</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="archivo">Archivo .json</label>
+            <input class="form-control" type="file" id="archivo" name="ArchivosJson" accept=".json,application/json" multiple required />
+            <div class="form-text">El tipo se detecta según la estructura. Los archivos se procesan en el orden seleccionado.</div>
+        </div>
+        <div id="vistaPrevia" class="alert alert-info mb-3" aria-live="polite" hidden></div>
+        <button type="submit" class="btn btn-primary">Enviar a la API</button>
+        <a class="btn btn-outline-secondary" asp-page="/Consultas">Ir a consultas</a>
+    </form>
+</div>
+@if (!string.IsNullOrWhiteSpace(Model.Error))
+{
+    <div class="alert alert-warning" role="alert">@Model.Error</div>
+}
+@if (!string.IsNullOrWhiteSpace(Model.Respuesta))
+{
+    <div class="panel">
+        <h2 class="h5">Respuesta del servicio</h2>
+        <pre class="json-result">@Model.Respuesta</pre>
+    </div>
+}
+<script>
+(function () {
+  const selector = document.getElementById('archivo');
+  const tipoPredeterminado = document.getElementById('tipo');
+  const vistaPrevia = document.getElementById('vistaPrevia');
+  if (!selector || !tipoPredeterminado || !vistaPrevia) return;
+
+  const actualizarVistaPrevia = async function () {
+    vistaPrevia.replaceChildren();
+    if (!selector.files.length) {
+      vistaPrevia.hidden = true;
+      return;
+    }
+
+    const lineas = [];
+    for (const archivo of selector.files) {
+      try {
+        const datos = JSON.parse(await archivo.text());
+        if (!Array.isArray(datos)) {
+          lineas.push(`${archivo.name}: el JSON debe ser un arreglo.`);
+          continue;
+        }
+
+        const muestra = datos[0];
+        const claves = muestra && typeof muestra === 'object' ? Object.keys(muestra).map(x => x.toLowerCase()) : [];
+        let tipo = tipoPredeterminado.value;
+        if (claves.includes('nit') && claves.includes('nombre')) tipo = 'rtu';
+        else if (claves.includes('tiempo') && claves.includes('referencia') && claves.includes('nit_emisor')) tipo = 'facturas';
+
+        lineas.push(`${archivo.name}: ${tipo}, ${datos.length} registro(s).`);
+        lineas.push(JSON.stringify(datos.slice(0, 3), null, 2));
+      } catch {
+        lineas.push(`${archivo.name}: JSON inválido.`);
+      }
+    }
+
+    vistaPrevia.textContent = lineas.join('\n\n');
+    vistaPrevia.hidden = false;
+  };
+  selector.addEventListener('change', actualizarVistaPrevia);
+  tipoPredeterminado.addEventListener('change', actualizarVistaPrevia);
+})();
+</script>
