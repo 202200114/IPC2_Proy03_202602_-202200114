@@ -6,7 +6,7 @@ namespace Proyecto3.API.Controllers;
 
 [ApiController]
 [Route("api/autorizaciones")]
-public sealed class AutorizacionesController : ControllerBase
+public class AutorizacionesController : ControllerBase
 {
     private readonly FacturaService _service;
     public AutorizacionesController(FacturaService service) => _service = service;

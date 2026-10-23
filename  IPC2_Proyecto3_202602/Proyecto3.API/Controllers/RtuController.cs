@@ -6,7 +6,7 @@ namespace Proyecto3.API.Controllers;
 
 [ApiController]
 [Route("api/rtu")]
-public sealed class RtuController : ControllerBase
+public class RtuController : ControllerBase
 {
     private readonly FacturaService _service;
     public RtuController(FacturaService service) => _service = service;

@@ -2,7 +2,7 @@ using System.Text.Json.Serialization;
 
 namespace Proyecto3.API.Models;
 
-public sealed class FacturaSolicitud
+public class FacturaSolicitud
 {
     [JsonRequired]
     [JsonPropertyName("TIEMPO")]

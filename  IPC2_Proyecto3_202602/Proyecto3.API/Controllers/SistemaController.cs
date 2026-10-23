@@ -5,7 +5,7 @@ namespace Proyecto3.API.Controllers;
 
 [ApiController]
 [Route("api/sistema")]
-public sealed class SistemaController : ControllerBase
+public class SistemaController : ControllerBase
 {
     private readonly FacturaService _service;
     public SistemaController(FacturaService service) => _service = service;

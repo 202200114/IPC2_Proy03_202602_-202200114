@@ -3,13 +3,14 @@ using System.Text.RegularExpressions;
 using Proyecto3.API.Models;
 
 namespace Proyecto3.API.Services;
-
+//Esta clase también cuenta con sealed, por conveniencia se dejará, después de todo es una especifica
 public sealed class FacturaService
 {
     private const string ArchivoContribuyentes = "contribuyentes.json";
     private const string ArchivoFacturas = "facturas.json";
     private readonly JsonFileStore _store;
     private readonly SemaphoreSlim _procesamiento = new(1, 1);
+    //Uso del regex
     private static readonly Regex RegexTiempo = new(
         @"(?<fecha>\d{1,2}/\d{1,2}/\d{4})\s+(?<hora>\d{1,2}:\d{1,2})",
         RegexOptions.Compiled | RegexOptions.CultureInvariant);

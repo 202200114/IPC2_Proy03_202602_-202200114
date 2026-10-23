@@ -2,7 +2,8 @@ using System.Text.Json.Serialization;
 
 namespace Proyecto3.API.Models;
 
-public sealed class RespuestaRtu
+
+public class RespuestaRtu
 {
     [JsonPropertyName("CONTRIBUYENTES_NUEVOS")]
     public int CONTRIBUYENTES_NUEVOS { get; set; }
@@ -12,12 +13,12 @@ public sealed class RespuestaRtu
     public int NITS_INVALIDOS { get; set; }
 }
 
-public sealed class RespuestaAutorizaciones
+public class RespuestaAutorizaciones
 {
     public ResultadoAutorizaciones resultadoAutorizaciones { get; set; } = new();
 }
 
-public sealed class ResultadoAutorizaciones
+public class ResultadoAutorizaciones
 {
     public int cantidadAutorizacionesAprobadas { get; set; }
     public int cantidadAutorizacionesRechazadasPorNitEmisorInexistente { get; set; }
@@ -32,7 +33,7 @@ public sealed class ResultadoAutorizaciones
     public List<DetalleAprobacion> detalleAprobaciones { get; set; } = new();
 }
 
-public sealed class DetalleAprobacion
+public class DetalleAprobacion
 {
     public string referencia { get; set; } = string.Empty;
     public long codigoAprobacion { get; set; }

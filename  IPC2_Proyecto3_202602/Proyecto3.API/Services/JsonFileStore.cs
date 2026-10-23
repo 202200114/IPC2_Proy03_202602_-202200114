@@ -3,6 +3,7 @@ using System.Text.Json;
 namespace Proyecto3.API.Services;
 
 /// <summary>Persistencia sencilla en archivos JSON locales, tal como permite el enunciado.</summary>
+/// Igualmente cuenta con sealed
 public sealed class JsonFileStore
 {
     private readonly string _dataPath;

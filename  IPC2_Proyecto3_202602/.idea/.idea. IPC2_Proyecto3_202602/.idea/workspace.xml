@@ -17,18 +17,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e0a3cd4-aa6b-4a45-8772-2de331d724e6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/ IPC2_Proyecto3_202602.sln" beforeDir="false" afterPath="$PROJECT_DIR$/ IPC2_Proyecto3_202602.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea. IPC2_Proyecto3_202602/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto3.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto3.API/Proyecto3.API.http" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/Proyecto3.API.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea. IPC2_Proyecto3_202602/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea. IPC2_Proyecto3_202602/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.API/Controllers/AutorizacionesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/Controllers/AutorizacionesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.API/Controllers/ConsultasController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/Controllers/ConsultasController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.API/Controllers/RtuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/Controllers/RtuController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.API/Controllers/SistemaController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/Controllers/SistemaController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.API/Models/Contribuyente.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/Models/Contribuyente.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.API/Models/FacturaRegistro.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/Models/FacturaRegistro.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.API/Models/FacturaSolicitud.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/Models/FacturaSolicitud.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.API/Models/Respuestas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/Models/Respuestas.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.API/Services/FacturaService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/Services/FacturaService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.API/Services/JsonFileStore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/Services/JsonFileStore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.API/Services/NitValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/Services/NitValidator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.API/bin/Debug/net10.0/Data/contribuyentes.json" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/bin/Debug/net10.0/Data/contribuyentes.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.API/bin/Debug/net10.0/Data/facturas.json" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/bin/Debug/net10.0/Data/facturas.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.API/bin/Debug/net10.0/Proyecto3.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/bin/Debug/net10.0/Proyecto3.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.API/bin/Debug/net10.0/Proyecto3.API.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/bin/Debug/net10.0/Proyecto3.API.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.API/bin/Debug/net10.0/Proyecto3.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/bin/Debug/net10.0/Proyecto3.API.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto3.API/obj/Debug/net10.0/Proyecto3.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/obj/Debug/net10.0/Proyecto3.API.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto3.API/obj/Debug/net10.0/Proyecto3.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/obj/Debug/net10.0/Proyecto3.API.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto3.API/obj/Debug/net10.0/Proyecto3.API.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/obj/Debug/net10.0/Proyecto3.API.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto3.API/obj/Proyecto3.API.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/obj/Proyecto3.API.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto3.API/obj/Proyecto3.API.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/obj/Proyecto3.API.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto3.API/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto3.API/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.API/obj/Debug/net10.0/Proyecto3.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/obj/Debug/net10.0/Proyecto3.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.API/obj/Debug/net10.0/Proyecto3.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/obj/Debug/net10.0/Proyecto3.API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.API/obj/Debug/net10.0/Proyecto3.API.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/obj/Debug/net10.0/Proyecto3.API.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.API/obj/Debug/net10.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/obj/Debug/net10.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.API/obj/Debug/net10.0/ref/Proyecto3.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/obj/Debug/net10.0/ref/Proyecto3.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.API/obj/Debug/net10.0/refint/Proyecto3.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/obj/Debug/net10.0/refint/Proyecto3.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.API/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.API/obj/Debug/net10.0/rjsmrazor.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/obj/Debug/net10.0/rjsmrazor.dswa.cache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.API/obj/Debug/net10.0/rpswa.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/obj/Debug/net10.0/rpswa.dswa.cache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.API/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto3.API/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.web/bin/Debug/net10.0/Proyecto3.web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/bin/Debug/net10.0/Proyecto3.web.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.web/bin/Debug/net10.0/Proyecto3.web.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/bin/Debug/net10.0/Proyecto3.web.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.web/bin/Debug/net10.0/Proyecto3.web.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/bin/Debug/net10.0/Proyecto3.web.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/Proyecto3.web.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/Proyecto3.web.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/Proyecto3.web.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/Proyecto3.web.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/Proyecto3.web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/Proyecto3.web.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/Proyecto3.web.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/Proyecto3.web.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/Proyecto3.web.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/Proyecto3.web.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/ref/Proyecto3.web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/ref/Proyecto3.web.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/refint/Proyecto3.web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/refint/Proyecto3.web.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/rjsmrazor.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/rjsmrazor.dswa.cache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.web/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.web/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +74,66 @@
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0" />
+      <entry key="S60" value="1.0" />
+      <entry key="M2" value="1.0" />
+      <entry key="M5" value="1.0" />
+      <entry key="M10" value="1.0" />
+      <entry key="M15" value="1.0" />
+      <entry key="M30" value="1.0" />
+      <entry key="H1" value="1.0" />
+      <entry key="H2" value="1.0" />
+      <entry key="H4" value="1.0" />
+      <entry key="D1" value="1.0" />
+      <entry key="W1" value="1.0" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="0.0" />
+      <entry key="M5" value="0.0" />
+      <entry key="M10" value="0.0" />
+      <entry key="M15" value="0.0" />
+      <entry key="M30" value="0.0" />
+      <entry key="H1" value="0.0" />
+      <entry key="H2" value="0.0" />
+      <entry key="H4" value="0.0" />
+      <entry key="D1" value="0.0" />
+      <entry key="W1" value="0.0" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.018710604759670756" />
+      <entry key="MS500" value="0.45125036373121497" />
+      <entry key="S2" value="0.8196046076375171" />
+      <entry key="S5" value="0.9235103275716934" />
+      <entry key="S10" value="0.9609944472116857" />
+      <entry key="S30" value="0.9868253396443663" />
+      <entry key="S60" value="0.993390829253203" />
+      <entry key="M2" value="0.9966899363659708" />
+      <entry key="M5" value="0.9986746574377571" />
+      <entry key="M10" value="0.999337109006644" />
+      <entry key="M15" value="0.9995580238317647" />
+      <entry key="M30" value="0.9997789874926182" />
+      <entry key="H1" value="0.9998894876398182" />
+      <entry key="H2" value="0.9999447422932021" />
+      <entry key="H4" value="0.9999723707649137" />
+      <entry key="D1" value="0.9999953950744725" />
+      <entry key="W1" value="0.9999993421521978" />
+    </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -152,6 +245,7 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

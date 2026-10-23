@@ -6,6 +6,9 @@ namespace Proyecto3.API.Services;
 /// Valida la forma y el dígito verificador de un NIT guatemalteco.
 /// Se acepta con o sin guion. El algoritmo usa los factores 2, 3, 4... desde la derecha.
 /// </summary>
+///
+// esta clase por su parte es de tipo static, las estaticas son unicas en el flujo del programa
+
 public static class NitValidator
 {
     public static bool EsValido(string? nit)
