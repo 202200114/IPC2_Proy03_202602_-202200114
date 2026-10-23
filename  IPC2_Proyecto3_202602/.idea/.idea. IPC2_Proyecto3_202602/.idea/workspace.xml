@@ -19,18 +19,6 @@
     <list default="true" id="2e0a3cd4-aa6b-4a45-8772-2de331d724e6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea. IPC2_Proyecto3_202602/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea. IPC2_Proyecto3_202602/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto3.API/Controllers/AutorizacionesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/Controllers/AutorizacionesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto3.API/Controllers/ConsultasController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/Controllers/ConsultasController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto3.API/Controllers/RtuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/Controllers/RtuController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto3.API/Controllers/SistemaController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/Controllers/SistemaController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto3.API/Models/Contribuyente.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/Models/Contribuyente.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto3.API/Models/FacturaRegistro.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/Models/FacturaRegistro.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto3.API/Models/FacturaSolicitud.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/Models/FacturaSolicitud.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto3.API/Models/Respuestas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/Models/Respuestas.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto3.API/Services/FacturaService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/Services/FacturaService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto3.API/Services/JsonFileStore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/Services/JsonFileStore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto3.API/Services/NitValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/Services/NitValidator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto3.API/bin/Debug/net10.0/Data/contribuyentes.json" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/bin/Debug/net10.0/Data/contribuyentes.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto3.API/bin/Debug/net10.0/Data/facturas.json" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/bin/Debug/net10.0/Data/facturas.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto3.API/bin/Debug/net10.0/Proyecto3.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/bin/Debug/net10.0/Proyecto3.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto3.API/bin/Debug/net10.0/Proyecto3.API.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/bin/Debug/net10.0/Proyecto3.API.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto3.API/bin/Debug/net10.0/Proyecto3.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/bin/Debug/net10.0/Proyecto3.API.pdb" afterDir="false" />
@@ -45,11 +33,16 @@
       <change beforePath="$PROJECT_DIR$/Proyecto3.API/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto3.API/obj/Debug/net10.0/rjsmrazor.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/obj/Debug/net10.0/rjsmrazor.dswa.cache.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto3.API/obj/Debug/net10.0/rpswa.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/obj/Debug/net10.0/rpswa.dswa.cache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.API/obj/Proyecto3.API.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/obj/Proyecto3.API.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.API/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto3.API/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto3.API/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.API/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.web/Pages/Ayuda.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/Pages/Ayuda.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto3.web/bin/Debug/net10.0/Proyecto3.web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/bin/Debug/net10.0/Proyecto3.web.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto3.web/bin/Debug/net10.0/Proyecto3.web.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/bin/Debug/net10.0/Proyecto3.web.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto3.web/bin/Debug/net10.0/Proyecto3.web.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/bin/Debug/net10.0/Proyecto3.web.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.web/bin/Debug/net10.0/Proyecto3.web.staticwebassets.endpoints.json" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/bin/Debug/net10.0/Proyecto3.web.staticwebassets.endpoints.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.web/bin/Debug/net10.0/Proyecto3.web.staticwebassets.runtime.json" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/bin/Debug/net10.0/Proyecto3.web.staticwebassets.runtime.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/Proyecto3.web.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/Proyecto3.web.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/Proyecto3.web.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/Proyecto3.web.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/Proyecto3.web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/Proyecto3.web.dll" afterDir="false" />
@@ -58,8 +51,16 @@
       <change beforePath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/ref/Proyecto3.web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/ref/Proyecto3.web.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/refint/Proyecto3.web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/refint/Proyecto3.web.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/rjimswa.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/rjimswa.dswa.cache.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/rjsmrazor.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/rjsmrazor.dswa.cache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/rpswa.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/rpswa.dswa.cache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/staticwebassets.build.endpoints.json" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/staticwebassets.build.endpoints.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/staticwebassets.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/staticwebassets.build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/staticwebassets.build.json.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/staticwebassets.build.json.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/staticwebassets.development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/obj/Debug/net10.0/staticwebassets.development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.web/obj/Proyecto3.web.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/obj/Proyecto3.web.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto3.web/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto3.web/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto3.web/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto3.web/obj/rider.project.restore.info" afterDir="false" />
     </list>

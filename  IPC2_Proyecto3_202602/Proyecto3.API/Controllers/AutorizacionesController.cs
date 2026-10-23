@@ -6,6 +6,7 @@ namespace Proyecto3.API.Controllers;
 
 [ApiController]
 [Route("api/autorizaciones")]
+//Aquí se visualiza como los controllers heredan de la superClase ControllerBase que proporciona ASP.NET core
 public class AutorizacionesController : ControllerBase
 {
     private readonly FacturaService _service;

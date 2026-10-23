@@ -6,10 +6,45 @@
     var carnet = Configuracion["Estudiante:Carnet"];
 }
 
-<h1>Ayuda</h1>
-<dl>
-    <dt>Nombre</dt>
-    <dd>@nombre</dd>
-    <dt>Carné</dt>
-    <dd>@carnet</dd>
-</dl>
+<style>
+    .hero{padding:1.5rem;border-radius:18px;background:linear-gradient(120deg,#14213d,#245b78);color:#fff;margin-bottom:1.4rem}
+    .panel{background:#fff;border:1px solid #dbe3ea;border-radius:14px;padding:1.2rem;margin-bottom:1.1rem;box-shadow:0 4px 14px #1020300d}
+</style>
+<div class="hero">
+    <h1>Ayuda del sistema</h1>
+    <p class="mb-0">Información del estudiante y documentación</p>
+</div>
+
+
+<div class="row g-3">
+    <div class="col-lg-5" id="estudiante">
+        <section class="panel h-100">
+            <h2 class="h5">Información del estudiante</h2>
+            @if (!string.IsNullOrWhiteSpace(nombre) && !string.IsNullOrWhiteSpace(carnet))
+            {
+                <dl class="mb-0">
+                    <dt>Nombre</dt>
+                    <dd>@nombre</dd>
+                    <dt>Carné</dt>
+                    <dd class="mb-0">@carnet</dd>
+                </dl>
+            }
+            else
+            {
+                <p class="mb-0">La información del estudiante no está configurada en <code>appsettings.json</code>.</p>
+            }
+        </section>
+    </div>
+    <div class="col-lg-7" id="documentacion">
+        <section class="panel h-100">
+            <h2 class="h5">Documentación del programa</h2>
+            <a href="~/documentacion/DocumentacionP3.pdf"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn btn-primary">
+                <i class="bi bi-file-earmark-pdf"></i>
+                Ver documentación del proyecto
+            </a>
+        </section>
+    </div>
+</div>
